@@ -10,22 +10,22 @@ namespace Hayaa.BaseComponent.DataAccess
 {
     public class MysqlService : IDatabaseService
     {
-        public int ExecuteNonQuery(string connectionString, string cmdText, CommandType cmdType = CommandType.Text)
+        public int ExecuteNonQuery<P>(string connectionString, string cmdText, P paramater, CommandType cmdType = CommandType.Text)
         {
             throw new NotImplementedException();
         }
 
-        public T GetData<T>(string connectionString, string cmdText, CommandType cmdType = CommandType.Text)
+        public T GetData<T, P>(string connectionString, string cmdText, P paramater, CommandType cmdType = CommandType.Text)
         {
             throw new NotImplementedException();
         }
 
-        public List<T> GetList<T>(string connectionString, string cmdText, CommandType cmdType = CommandType.Text)
+        public List<T> GetList<T, P>(string connectionString, string cmdText, P paramater, CommandType cmdType = CommandType.Text)
         {
             throw new NotImplementedException();
         }
 
-        public int GetPrimarykey(string connectionString, string cmdText, CommandType cmdType = CommandType.Text)
+        public int GetPrimarykey<P>(string connectionString, string cmdText, P paramater, CommandType cmdType = CommandType.Text)
         {
             throw new NotImplementedException();
         }

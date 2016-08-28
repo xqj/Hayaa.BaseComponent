@@ -9,9 +9,8 @@ namespace Hayaa.BaseComponent.DataAccess
 {
      public interface IDatabaseService
     {
-        T GetData<T>(string connectionString,string cmdText,  CommandType cmdType = CommandType.Text);
-        List<T> GetList<T>(string connectionString, string cmdText,  CommandType cmdType = CommandType.Text);
-        int GetPrimarykey(string connectionString, string cmdText, CommandType cmdType= CommandType.Text);
-        int ExecuteNonQuery(string connectionString, string cmdText, CommandType cmdType = CommandType.Text);
+        T GetData<T,P>(string connectionString,string cmdText,P paramater,  CommandType cmdType = CommandType.Text);
+        List<T> GetList<T, P>(string connectionString, string cmdText, P paramater, CommandType cmdType = CommandType.Text);
+         int ExecuteNonQuery<P>(string connectionString, string cmdText, P paramater, CommandType cmdType = CommandType.Text);
     }
 }
